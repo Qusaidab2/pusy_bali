@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pusy Bali | Fashion Brand</title>
+  <title>Pusy Bali | High Fashion Brand</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 
   <!-- Navbar -->
   <header>
-    <div class="container nav-container">
+    <div class="nav-container">
       <div class="logo">Pusy Bali</div>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#shop">Shop</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -26,10 +28,13 @@
 
   <!-- Hero Section -->
   <section class="hero" id="home">
+    <video autoplay muted loop class="hero-video">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
     <div class="overlay"></div>
     <div class="hero-text">
-      <h1>Affordable Casual & Party Outfits</h1>
-      <p>Activewear • Dresses • Accessories</p>
+      <h1>Affordable & Stunning Bali Fashion</h1>
+      <p>Activewear • Dresses • Party Outfits • Accessories</p>
       <a href="#shop" class="btn">Shop Now</a>
     </div>
   </section>
@@ -41,44 +46,50 @@
       <div class="products">
         <div class="product">
           <img src="assets/item1.jpg" alt="Calista Set">
-          <div class="product-info">
+          <div class="product-overlay">
             <h3>Calista Set</h3>
             <p>$45</p>
+            <a href="#" class="btn">Buy Now</a>
           </div>
         </div>
         <div class="product">
           <img src="assets/item2.jpg" alt="Aelita Lace Dress">
-          <div class="product-info">
+          <div class="product-overlay">
             <h3>Aelita Lace Dress</h3>
             <p>$60</p>
+            <a href="#" class="btn">Buy Now</a>
           </div>
         </div>
         <div class="product">
           <img src="assets/item3.jpg" alt="Summer Activewear">
-          <div class="product-info">
+          <div class="product-overlay">
             <h3>Summer Activewear</h3>
             <p>$35</p>
+            <a href="#" class="btn">Buy Now</a>
           </div>
         </div>
         <div class="product">
           <img src="assets/item4.jpg" alt="Casual Party Dress">
-          <div class="product-info">
+          <div class="product-overlay">
             <h3>Casual Party Dress</h3>
             <p>$55</p>
+            <a href="#" class="btn">Buy Now</a>
           </div>
         </div>
         <div class="product">
           <img src="assets/item5.jpg" alt="Tropical Skirt">
-          <div class="product-info">
+          <div class="product-overlay">
             <h3>Tropical Skirt</h3>
             <p>$30</p>
+            <a href="#" class="btn">Buy Now</a>
           </div>
         </div>
         <div class="product">
           <img src="assets/item6.jpg" alt="Beach Set">
-          <div class="product-info">
+          <div class="product-overlay">
             <h3>Beach Set</h3>
             <p>$40</p>
+            <a href="#" class="btn">Buy Now</a>
           </div>
         </div>
       </div>
@@ -86,14 +97,28 @@
     </div>
   </section>
 
+  <!-- Instagram Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <h2>Instagram Highlights</h2>
+      <div class="gallery-grid">
+        <img src="assets/insta1.jpg" alt="">
+        <img src="assets/insta2.jpg" alt="">
+        <img src="assets/insta3.jpg" alt="">
+        <img src="assets/insta4.jpg" alt="">
+        <img src="assets/insta5.jpg" alt="">
+        <img src="assets/insta6.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section class="about" id="about">
     <div class="container">
-      <h2>About Us</h2>
+      <h2>About Pusy Bali</h2>
       <p>
-        Pusy Bali brings stylish outfits perfect for Bali vibes.
-        From casual streetwear to party dresses and activewear, our collections
-        are designed to make you feel confident and elegant.
+        We craft Bali-inspired outfits for fashion-forward women. From party dresses
+        to casual wear and activewear, each piece is designed to elevate your style.
       </p>
       <p><strong>Our Stores:</strong> Ungasan • Canggu / Batu Bolong</p>
     </div>
@@ -103,9 +128,13 @@
   <section class="contact" id="contact">
     <div class="container">
       <h2>Contact Us</h2>
-      <p>Follow us on Instagram: <a href="https://www.instagram.com/pusy_bali/" target="_blank">@pusy_bali</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/pusy_bali/" target="_blank">@pusy_bali</a></p>
       <p>Email: info@pusybali.com</p>
       <p>WhatsApp: +62 812 3456 7890</p>
+      <form>
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
     </div>
   </section>
 
@@ -115,6 +144,12 @@
       <p>© 2025 Pusy Bali. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script>
+    ScrollReveal().reveal('.hero-text', { delay: 200, origin:'bottom', distance:'50px', duration:1000 });
+    ScrollReveal().reveal('.products .product', { interval: 200, origin:'bottom', distance:'30px', duration:800 });
+    ScrollReveal().reveal('.gallery img', { interval: 150, origin:'bottom', distance:'20px', duration:800 });
+  </script>
 
 </body>
 </html>
